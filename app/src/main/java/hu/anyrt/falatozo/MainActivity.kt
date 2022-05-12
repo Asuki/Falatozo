@@ -10,6 +10,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun x(){
-
+        val x = 1
     }
 }
