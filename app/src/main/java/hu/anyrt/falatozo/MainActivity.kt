@@ -9,10 +9,4 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
-    fun x(){
-        var x = 1
-        x = 3
-        Log.d("MainActivity", "x: ${x}")
-    }
 }
