@@ -2,6 +2,7 @@ package hu.anyrt.falatozo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -10,6 +11,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun x(){
-        val x = 1
+        var x = 1
+        x = 3
+        Log.d("MainActivity", "x: ${x}")
     }
 }
