@@ -8,7 +8,9 @@ android {
 
     defaultConfig {
         applicationId "hu.anyrt.falatozo"
+        // Az a verziószám, amire még engedi telepíteni magát a rendszer
         minSdk 23
+        // Jellemzően a legújabb. Az a verziószám, amire szánjuk az appot.
         targetSdk 31
         // Minden publikáláskor változik
         versionCode 1
