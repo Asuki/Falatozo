@@ -13,11 +13,4 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
-
-    <style name="defaultButton">
-        <item name="android:tint">@color/light_gray</item>
-        <item name="android:clickable">true</item>
-        <item name="android:selectable">true</item>
-        <item name="android:padding">10dp</item>
-    </style>
 </resources>
