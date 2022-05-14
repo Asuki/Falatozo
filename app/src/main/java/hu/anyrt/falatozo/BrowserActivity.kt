@@ -1,26 +1,25 @@
 package hu.anyrt.falatozo
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebResourceRequest
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import androidx.appcompat.app.AppCompatActivity
 
-
-class MainActivity : AppCompatActivity() {
+class BrowserActivity : AppCompatActivity() {
 
     private lateinit var mainWebView: WebView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_browser)
 
         mainWebView = findViewById(R.id.browser)
-
-        doSomething()
+        renameThisMethod()
     }
 
-    private fun doSomething() {
+
+    private fun renameThisMethod() {
         mainWebView.settings.javaScriptEnabled = true
         mainWebView.setWebViewClient(object : WebViewClient() {
             override fun shouldOverrideUrlLoading(
