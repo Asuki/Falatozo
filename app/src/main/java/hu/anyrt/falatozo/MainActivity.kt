@@ -1,46 +1,49 @@
 package hu.anyrt.falatozo
 
+import android.content.Intent
 import android.os.Bundle
-import android.webkit.WebResourceRequest
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var mainWebView: WebView
+    //region view items
+    private lateinit var imageButtonBrowser: ImageButton
+    private lateinit var imageButtonSettings: ImageButton
+    private lateinit var imageButtonExit: ImageButton
+    //endregion
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        mainWebView = findViewById(R.id.browser)
-
-        doSomething()
+        initViews()
+        initEvents()
     }
 
-    private fun doSomething() {
-        mainWebView.settings.javaScriptEnabled = true
-        mainWebView.setWebViewClient(object : WebViewClient() {
-            override fun shouldOverrideUrlLoading(
-                view: WebView,
-                request: WebResourceRequest
-            ): Boolean {
-                view.loadUrl(request.url.toString())
-                return false
-            }
-        })
-        /*
-        * myWebView.setWebViewClient(new WebViewClient() {
-    @Override
-    public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-        view.loadUrl(request.getUrl().toString());
-        return false;
+    /**
+     * Nézetek alap beállítása
+     * */
+    private fun initViews() {
+        imageButtonBrowser = findViewById(R.id.imageViewBrowser)
+        imageButtonSettings = findViewById(R.id.imageViewSettings)
+        imageButtonExit = findViewById(R.id.imageViewExit)
     }
-});
-        * */
 
-        mainWebView.loadUrl("https://www.anyrt.hu")
+    /**
+     * Kattintások és további események beállítása
+     * */
+    private fun initEvents() {
+        // BrowserActivity megnyitása kattintásra
+        imageButtonBrowser.setOnClickListener {
+            // Új intentet készítünk. Itt állítjuk be, hogy milyen activity-t akarunk majd kezelni
+            val browserIntent = Intent(this@MainActivity, BrowserActivity::class.java)
+            // Activity indítása
+            startActivity(browserIntent)
+        }
+        imageButtonExit.setOnClickListener {
+            finish()
+        }
     }
 }
