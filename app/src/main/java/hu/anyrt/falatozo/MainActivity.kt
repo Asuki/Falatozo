@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(browserIntent)
         }
         imageButtonExit.setOnClickListener {
-            finish()
+            finishAffinity()
         }
     }
 }
