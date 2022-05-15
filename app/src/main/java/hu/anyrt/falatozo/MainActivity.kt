@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
     //region view items
+
     private lateinit var webView: WebView
     //endregion
 
