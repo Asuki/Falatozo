@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Foody</string>
     <string name="menu">Menu</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">"Home screen "</string>
+    <string name="home">Home</string>
+    <string name="settings">Settings</string>
+    <string name="second">Second</string>
 </resources>

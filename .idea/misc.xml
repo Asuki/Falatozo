@@ -3,6 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/drawable/ic_home.xml" value="0.3635" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/activity_main.xml" value="0.3428442028985507" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/fragment_second.xml" value="0.3428442028985507" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/menu/main_menu.xml" value="0.3625" />
         <entry key="..\:/Sources/we-create-the-future/Falatozo/app/src/main/res/layout/activity_browser.xml" value="0.42916666666666664" />
         <entry key="..\:/Sources/we-create-the-future/Falatozo/app/src/main/res/layout/activity_main.xml" value="0.42916666666666664" />
       </map>

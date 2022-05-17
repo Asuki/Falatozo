@@ -2,4 +2,8 @@
 <resources>
     <string name="app_name">Falatozó</string>
     <string name="menu">Menü</string>
+    <string name="home">Főképernyő</string>
+    <string name="settings">Beállítások</string>
+    <string name="hello_blank_fragment">Kezdő oldal</string>
+    <string name="second">Második</string>
 </resources>
