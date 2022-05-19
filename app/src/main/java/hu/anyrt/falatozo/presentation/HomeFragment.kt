@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import hu.anyrt.falatozo.R
 
 
@@ -16,7 +17,7 @@ class HomeFragment : Fragment() {
 
     // Lista nézetek
     private lateinit var listViewDays: ListView
-    private lateinit var listViewMenu: ListView
+    private lateinit var recyclerViewMenu: RecyclerView
     // Képek a gombokhoz
     private lateinit var imageViewAddToBasket: ImageView
     private lateinit var imageViewClearBasket: ImageView
@@ -83,7 +84,7 @@ class HomeFragment : Fragment() {
             // A fragmentekben kell a fő nézet az összekapcsoláshoz
             // ezért használjuk itt a rootView változót
             listViewDays = rootView.findViewById(R.id.listViewDays)
-            listViewMenu = rootView.findViewById(R.id.listViewMenu)
+            recyclerViewMenu = rootView.findViewById(R.id.listViewMenu)
             imageViewAddToBasket = rootView.findViewById(R.id.imageViewAddToBascetMain)
             imageViewClearBasket = rootView.findViewById(R.id.imageViewClearBasketMain)
         }

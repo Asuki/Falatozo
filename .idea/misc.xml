@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/drawable/ic_exit.xml" value="0.36" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/drawable/ic_home.xml" value="0.3635" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/drawable/ic_settings.xml" value="0.36" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/activity_main.xml" value="0.3428442028985507" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/activity_settings.xml" value="0.33559782608695654" />
-        <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/fragment_home.xml" value="0.3625" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/fragment_home.xml" value="0.31521739130434784" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/fragment_second.xml" value="0.3428442028985507" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/menu_item.xml" value="0.33559782608695654" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/menu-v26/action_bar_menu.xml" value="0.3625" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/menu/action_bar_menu.xml" value="0.3625" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/menu/lkajsdfl.xml" value="0.3614583333333333" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/menu/main_menu.xml" value="0.3625" />
         <entry key="..\:/Sources/we-create-the-future/Falatozo/app/src/main/res/layout/activity_browser.xml" value="0.42916666666666664" />

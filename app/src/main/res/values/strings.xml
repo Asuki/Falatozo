@@ -8,6 +8,7 @@
     <string name="second">Second</string>
     <string name="menuOrder">Menu order</string>
     <string name="menu_notification">Menu push notification</string>
-    <string name="menu_notification_pref">pref_get_menu_notification</string>
+    <string name="menu_notification_pref" translatable="false">pref_get_menu_notification</string>
     <string name="soups">Soups</string>
+    <string name="exit">Exit</string>
 </resources>
