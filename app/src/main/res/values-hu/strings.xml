@@ -9,4 +9,5 @@
     <string name="menuOrder">Ebédrendelés</string>
     <string name="menu_notification">Menü értesítés</string>
     <string name="menu_notification_pref">pref_get_menu_notification</string>
+    <string name="soups">Levesek</string>
 </resources>

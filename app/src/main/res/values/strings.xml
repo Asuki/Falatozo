@@ -9,4 +9,5 @@
     <string name="menuOrder">Menu order</string>
     <string name="menu_notification">Menu push notification</string>
     <string name="menu_notification_pref">pref_get_menu_notification</string>
+    <string name="soups">Soups</string>
 </resources>

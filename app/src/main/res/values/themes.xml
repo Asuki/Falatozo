@@ -20,4 +20,9 @@
         <item name="android:selectable">true</item>
         <item name="android:padding">10dp</item>
     </style>
+
+    <style name="defaultMenuHeader">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>
