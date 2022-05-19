@@ -12,10 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Falatozo">
         <activity
-            android:name=".SettingsActivity"
-            android:exported="false" />
-        <activity
-            android:name=".presentation.BrowserActivity"
+            android:name=".presentation.SettingsActivity"
             android:exported="false" />
         <activity
             android:name=".presentation.MainActivity"
