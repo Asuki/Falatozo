@@ -2,4 +2,6 @@
 <resources>
     <dimen name="default_vertical_padding">10dp</dimen>
     <dimen name="default_img_button">40dp</dimen>
+    <dimen name="default_vertical_margin">8dp</dimen>
+    <dimen name="default_horizontal_margin">16dp</dimen>
 </resources>

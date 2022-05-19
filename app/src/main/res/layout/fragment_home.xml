@@ -1,14 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".presentation.HomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <ListView
+        android:id="@+id/listViewDays"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="50dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <ListView
+        android:id="@+id/listViewMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/listViewDays"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/imageViewAddToBascetMain"/>
+
+    <ImageView
+        android:id="@+id/imageViewAddToBascetMain"
+        style="@style/defaultButton"
+        android:layout_width="@dimen/default_img_button"
+        android:layout_height="@dimen/default_img_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/constraintLayoutOrderMain"
+        app:layout_constraintEnd_toStartOf="@id/imageViewClearBasketMain"
+        android:padding="0dp"
+        android:src="@drawable/ic_browsr" />
+
+    <ImageView
+        android:id="@+id/imageViewClearBasketMain"
+        style="@style/defaultButton"
+        android:layout_width="@dimen/default_img_button"
+        android:layout_height="@dimen/default_img_button"
+        app:layout_constraintTop_toTopOf="@id/imageViewAddToBascetMain"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewAddToBascetMain"
+        app:layout_constraintStart_toEndOf="@id/imageViewAddToBascetMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="0dp"
+        android:src="@drawable/ic_browsr" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutOrderMain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,4 +6,5 @@
     <string name="settings">Beállítások</string>
     <string name="hello_blank_fragment">Kezdő oldal</string>
     <string name="second">Második</string>
+    <string name="menuOrder">Ebédrendelés</string>
 </resources>
