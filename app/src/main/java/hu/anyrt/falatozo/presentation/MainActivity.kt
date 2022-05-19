@@ -13,15 +13,19 @@ import hu.anyrt.falatozo.R
 
 class MainActivity : AppCompatActivity() {
 
+    // Navigációhoz kell - vezérlő. Ez tartalmazza a fragmentek nézetét
     private lateinit var navController: NavController
+    // Navigációhoz kell - navigáció a fragment váltáshoz
     private lateinit var bottomNavigation: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        // Navigációhoz kell - fragment összekapcsolása akóddal
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView)
                 as NavHostFragment
+        // Navigációhoz kell - fragmentek hozzákapcsolása a conrollerhez
         navController = navHostFragment.navController
         val appBarConfiguration = AppBarConfiguration(
             setOf(
@@ -30,11 +34,14 @@ class MainActivity : AppCompatActivity() {
             )
         )
 
+        // Navigációhoz kell - alsó navigáció nézetének összekapcsolása a kóddal
         bottomNavigation = findViewById(R.id.bottomNavigationMain)
+        // Navigációhoz kell - alsó navigáció összekapcsolása a controllerrel
         bottomNavigation.setupWithNavController(navController)
         setupActionBarWithNavController(navController, appBarConfiguration)
     }
 
+    // Navigációhoz kell - navigáció beállítása
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
