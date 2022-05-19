@@ -10,7 +10,9 @@ import hu.anyrt.falatozo.R
 
 class SettingsActivity : AppCompatActivity() {
 
+    //region nézetek
     private lateinit var switchMenuNotification: SwitchMaterial
+    //endregion
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var sharedEditor: SharedPreferences.Editor
     private val TAG = this::class.java.simpleName
