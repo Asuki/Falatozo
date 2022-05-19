@@ -23,7 +23,10 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     private fun init() {
+        // Beállítások kezelése. Kell hozzá egy fájlnév
+        // És kell hozzá az elérési mód. a MODE_PRIVATE azt jelenti, hogy csak az app olvashatja
         sharedPreferences = getSharedPreferences("falatozo_shared_pref", MODE_PRIVATE)
+        // Az editorral menthetők a beállítások
         sharedEditor = sharedPreferences.edit()
         initViews()
         initEvents()
