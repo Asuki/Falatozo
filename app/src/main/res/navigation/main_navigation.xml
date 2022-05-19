@@ -15,4 +15,5 @@
         android:name="hu.anyrt.falatozo.presentation.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second" />
+
 </navigation>

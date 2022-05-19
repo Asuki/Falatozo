@@ -7,4 +7,6 @@
     <string name="hello_blank_fragment">Kezdő oldal</string>
     <string name="second">Második</string>
     <string name="menuOrder">Ebédrendelés</string>
+    <string name="menu_notification">Menü értesítés</string>
+    <string name="menu_notification_pref">pref_get_menu_notification</string>
 </resources>
