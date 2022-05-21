@@ -11,7 +11,11 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import hu.anyrt.falatozo.Entity.DayEntity
 import hu.anyrt.falatozo.R
+import hu.anyrt.falatozo.data.Dao
+import hu.anyrt.falatozo.data.Day
+import hu.anyrt.falatozo.data.ObjectBox
 
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +29,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        ObjectBox.init(this)
         setSupportActionBar(findViewById(R.id.toolbarMain))
 
         // Navigációhoz kell - fragment összekapcsolása akóddal
@@ -45,6 +49,45 @@ class MainActivity : AppCompatActivity() {
         // Navigációhoz kell - alsó navigáció összekapcsolása a controllerrel
         bottomNavigation.setupWithNavController(navController)
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        test()
+    }
+
+    private fun test() {
+        Dao().clearDays()
+        Dao().addDay(
+            Day(
+                0,
+                "Hétfő",
+                "2022.05.23",
+                21,
+                true
+            )
+        )
+        Dao().addDay(
+            Day(
+                day = "Kedd",
+                date = "2022.05.24",
+                weekNumber = 21,
+                isSelected = true
+            )
+        )
+        Dao().addDay(
+            Day(
+                day = "Szerda",
+                date = "2022.05.25",
+                weekNumber = 21,
+                isSelected = true
+            )
+        )
+        Dao().addDay(
+            Day(
+                day = "Csütörtök",
+                date = "2022.05.26",
+                weekNumber = 21,
+                isSelected = true
+            )
+        )
     }
 
     // Navigációhoz kell - navigáció beállítása
@@ -71,8 +114,7 @@ class MainActivity : AppCompatActivity() {
         // Ha a kijelentkezés gombot megnyomja a felhasználó, kilép
         if (id == R.id.logoutMenu) {
             finishAffinity()
-        }
-        else if (id == R.id.settingsMenu){
+        } else if (id == R.id.settingsMenu) {
             startActivity(Intent(this@MainActivity, SettingsActivity::class.java))
         }
         return super.onOptionsItemSelected(item)

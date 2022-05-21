@@ -7,21 +7,26 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.ImageView
-import android.widget.ListView
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import hu.anyrt.falatozo.Entity.DayEntity
 import hu.anyrt.falatozo.R
+import hu.anyrt.falatozo.data.Dao
+import hu.anyrt.falatozo.data.Day
+import hu.anyrt.falatozo.presentation.adapter.DayRecyclerAdapter
 
 
 class HomeFragment : Fragment() {
 
     // Lista nézetek
-    private lateinit var listViewDays: ListView
+    private lateinit var recyclerViewDays: RecyclerView
     private lateinit var recyclerViewMenu: RecyclerView
+
     // Képek a gombokhoz
     private lateinit var imageViewAddToBasket: ImageView
     private lateinit var imageViewClearBasket: ImageView
-    private var menuDayList : ArrayList<String> = ArrayList()
+    private var menuDayList: ArrayList<Day> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,27 +55,21 @@ class HomeFragment : Fragment() {
 
     private fun populateList() {
         // Minta lista elemek hozzáadása
-        menuDayList.add("Hétfő")
-        menuDayList.add("Kedd")
-        menuDayList.add("Szerda")
-        menuDayList.add("Csütörtök")
+        menuDayList.addAll(Dao().getDays())
 
         // lista feltöltése
-        listViewDays.adapter = ArrayAdapter(
-            requireContext(),
-            // a lista kinézetét határozza meg
-            android.R.layout.simple_list_item_1,
-            // az adathalmaz
-            menuDayList)
+        recyclerViewDays.adapter = DayRecyclerAdapter(
+            requireContext(), menuDayList
+        )
     }
 
     private fun initEvents() {
         imageViewAddToBasket.setOnClickListener {
             // a let lehetővé teszi, hogy hivatkozzunk az aktivitire.
             // ez lamda kifejezéskét működik
-            activity?.let{
+            activity?.let {
                 // activity indítás
-                it.startActivity(Intent (it, SettingsActivity::class.java))
+                it.startActivity(Intent(it, SettingsActivity::class.java))
             }
         }
     }
@@ -80,10 +79,16 @@ class HomeFragment : Fragment() {
      * @param rootView: A Fragmenthez tartozó nézet
      * */
     private fun initViews(rootView: View?) {
-        if(rootView != null) {
+        if (rootView != null) {
             // A fragmentekben kell a fő nézet az összekapcsoláshoz
             // ezért használjuk itt a rootView változót
-            listViewDays = rootView.findViewById(R.id.listViewDays)
+            recyclerViewDays = rootView.findViewById(R.id.listViewDays)
+            recyclerViewDays.layoutManager =
+                LinearLayoutManager(
+                    requireContext(),
+                    LinearLayoutManager.HORIZONTAL,
+                    false
+                )
             recyclerViewMenu = rootView.findViewById(R.id.listViewMenu)
             imageViewAddToBasket = rootView.findViewById(R.id.imageViewAddToBascetMain)
             imageViewClearBasket = rootView.findViewById(R.id.imageViewClearBasketMain)
