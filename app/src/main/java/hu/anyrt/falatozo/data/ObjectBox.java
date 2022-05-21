@@ -1,8 +1,6 @@
 package hu.anyrt.falatozo.data;
 
 import android.content.Context;
-
-import hu.anyrt.falatozo.MyObjectBox;
 import io.objectbox.BoxStore;
 
 public class ObjectBox {

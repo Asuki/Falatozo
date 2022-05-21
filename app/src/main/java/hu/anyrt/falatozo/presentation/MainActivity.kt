@@ -4,27 +4,27 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.bottomnavigation.BottomNavigationView
-import hu.anyrt.falatozo.Entity.DayEntity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import hu.anyrt.falatozo.R
 import hu.anyrt.falatozo.data.Dao
 import hu.anyrt.falatozo.data.Day
 import hu.anyrt.falatozo.data.ObjectBox
+import hu.anyrt.falatozo.presentation.adapter.DayRecyclerAdapter
 
 
 class MainActivity : AppCompatActivity() {
 
-    // Navigációhoz kell - vezérlő. Ez tartalmazza a fragmentek nézetét
-    private lateinit var navController: NavController
+    // Lista nézetek
+    private lateinit var recyclerViewDays: RecyclerView
+    private lateinit var recyclerViewMenu: RecyclerView
 
-    // Navigációhoz kell - navigáció a fragment váltáshoz
-    private lateinit var bottomNavigation: BottomNavigationView
+    // Képek a gombokhoz
+    private lateinit var imageViewAddToBasket: ImageView
+    private lateinit var imageViewClearBasket: ImageView
+    private var menuDayList: ArrayList<Day> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,25 +32,13 @@ class MainActivity : AppCompatActivity() {
         ObjectBox.init(this)
         setSupportActionBar(findViewById(R.id.toolbarMain))
 
-        // Navigációhoz kell - fragment összekapcsolása akóddal
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView)
-                as NavHostFragment
-        // Navigációhoz kell - fragmentek hozzákapcsolása a conrollerhez
-        navController = navHostFragment.navController
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(
-                R.id.homeFragment,
-                R.id.secondFragment,
-            )
-        )
+        initViews()
+    }
 
-        // Navigációhoz kell - alsó navigáció nézetének összekapcsolása a kóddal
-        bottomNavigation = findViewById(R.id.bottomNavigationMain)
-        // Navigációhoz kell - alsó navigáció összekapcsolása a controllerrel
-        bottomNavigation.setupWithNavController(navController)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-
+    override fun onResume() {
+        super.onResume()
         test()
+        populateList()
     }
 
     private fun test() {
@@ -69,7 +57,7 @@ class MainActivity : AppCompatActivity() {
                 day = "Kedd",
                 date = "2022.05.24",
                 weekNumber = 21,
-                isSelected = true
+                isSelected = false
             )
         )
         Dao().addDay(
@@ -77,7 +65,7 @@ class MainActivity : AppCompatActivity() {
                 day = "Szerda",
                 date = "2022.05.25",
                 weekNumber = 21,
-                isSelected = true
+                isSelected = false
             )
         )
         Dao().addDay(
@@ -85,14 +73,47 @@ class MainActivity : AppCompatActivity() {
                 day = "Csütörtök",
                 date = "2022.05.26",
                 weekNumber = 21,
-                isSelected = true
+                isSelected = false
+            )
+        )
+        Dao().addDay(
+            Day(
+                day = "Péntek",
+                date = "2022.05.27",
+                weekNumber = 21,
+                isSelected = false
             )
         )
     }
 
-    // Navigációhoz kell - navigáció beállítása
-    override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp() || super.onSupportNavigateUp()
+
+    private fun populateList() {
+        // Minta lista elemek hozzáadása
+        menuDayList.addAll(Dao().getDays())
+
+        // lista feltöltése
+        recyclerViewDays.adapter = DayRecyclerAdapter(
+            this@MainActivity, menuDayList
+        )
+    }
+
+    /**
+     * Beállítja a nézeteket a Fragmenthez
+     * */
+    private fun initViews() {
+        // A fragmentekben kell a fő nézet az összekapcsoláshoz
+        // ezért használjuk itt a rootView változót
+        recyclerViewDays = findViewById(R.id.listViewDays)
+        recyclerViewDays.layoutManager =
+            LinearLayoutManager(
+                this@MainActivity,
+                LinearLayoutManager.HORIZONTAL,
+                false
+            )
+        recyclerViewMenu = findViewById(R.id.listViewMenu)
+        imageViewAddToBasket = findViewById(R.id.imageViewAddToBasketMain)
+        imageViewClearBasket = findViewById(R.id.imageViewClearBasketMain)
+
     }
 
     /**

@@ -10,4 +10,6 @@
     <string name="menu_notification">Menü értesítés</string>
     <string name="soups">Levesek</string>
     <string name="exit">Kijelentkezés</string>
+    <string name="add_to_basket">Hozzáadás a kosárhoz</string>
+    <string name="clear_basket">Kosár ürítése</string>
 </resources>

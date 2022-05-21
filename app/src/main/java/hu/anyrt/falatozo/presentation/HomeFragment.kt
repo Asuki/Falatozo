@@ -5,12 +5,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import hu.anyrt.falatozo.Entity.DayEntity
 import hu.anyrt.falatozo.R
 import hu.anyrt.falatozo.data.Dao
 import hu.anyrt.falatozo.data.Day
@@ -90,7 +88,7 @@ class HomeFragment : Fragment() {
                     false
                 )
             recyclerViewMenu = rootView.findViewById(R.id.listViewMenu)
-            imageViewAddToBasket = rootView.findViewById(R.id.imageViewAddToBascetMain)
+            imageViewAddToBasket = rootView.findViewById(R.id.imageViewAddToBasketMain)
             imageViewClearBasket = rootView.findViewById(R.id.imageViewClearBasketMain)
         }
     }

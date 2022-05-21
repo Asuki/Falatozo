@@ -1,6 +1,5 @@
 package hu.anyrt.falatozo.data
 
-import hu.anyrt.falatozo.Entity.DayEntity
 
 class Dao {
     val dayBox = ObjectBox.get().boxFor(Day::class.java)

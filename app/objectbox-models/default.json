@@ -36,40 +36,6 @@
         }
       ],
       "relations": []
-    },
-    {
-      "id": "2:3528295928943840132",
-      "lastPropertyId": "5:6443684064960804938",
-      "name": "DayEntity",
-      "properties": [
-        {
-          "id": "1:1067398928394271431",
-          "name": "id",
-          "type": 6,
-          "flags": 1
-        },
-        {
-          "id": "2:6900461500517422746",
-          "name": "day",
-          "type": 9
-        },
-        {
-          "id": "3:2998167096759067630",
-          "name": "date",
-          "type": 9
-        },
-        {
-          "id": "4:5396985499853910563",
-          "name": "weekNumber",
-          "type": 5
-        },
-        {
-          "id": "5:6443684064960804938",
-          "name": "isSelected",
-          "type": 1
-        }
-      ],
-      "relations": []
     }
   ],
   "lastEntityId": "2:3528295928943840132",
@@ -78,9 +44,17 @@
   "lastSequenceId": "0:0",
   "modelVersion": 5,
   "modelVersionParserMinimum": 5,
-  "retiredEntityUids": [],
+  "retiredEntityUids": [
+    3528295928943840132
+  ],
   "retiredIndexUids": [],
-  "retiredPropertyUids": [],
+  "retiredPropertyUids": [
+    1067398928394271431,
+    6900461500517422746,
+    2998167096759067630,
+    5396985499853910563,
+    6443684064960804938
+  ],
   "retiredRelationUids": [],
   "version": 1
 }

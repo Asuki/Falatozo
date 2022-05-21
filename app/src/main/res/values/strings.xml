@@ -11,4 +11,6 @@
     <string name="menu_notification_pref" translatable="false">pref_get_menu_notification</string>
     <string name="soups">Soups</string>
     <string name="exit">Exit</string>
+    <string name="clear_basket">clear basket</string>
+    <string name="add_to_basket">Add to basket</string>
 </resources>

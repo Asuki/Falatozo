@@ -12,32 +12,65 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/primary_color"
-        app:title="@string/app_name"
-        app:titleTextColor="@color/white"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:title="@string/app_name"
+        app:titleTextColor="@color/white" />
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigationMain"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbarMain"
-        app:navGraph="@navigation/main_navigation" />
-
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigationMain"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listViewDays"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarMain" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listViewMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/imageViewAddToBasketMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/listViewDays"
+        tools:listitem="@layout/menu_item" />
+
+    <ImageView
+        android:id="@+id/imageViewAddToBasketMain"
+        style="@style/defaultButton"
+        android:layout_width="@dimen/default_img_button"
+        android:layout_height="@dimen/default_img_button"
+        android:contentDescription="@string/add_to_basket"
+        android:padding="0dp"
+        android:src="@drawable/ic_add_basket"
+        app:layout_constraintBottom_toTopOf="@id/constraintLayoutOrderMain"
+        app:layout_constraintEnd_toStartOf="@id/imageViewClearBasketMain"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewClearBasketMain"
+        style="@style/defaultButton"
+        android:layout_width="@dimen/default_img_button"
+        android:layout_height="@dimen/default_img_button"
+        android:contentDescription="@string/clear_basket"
+        android:padding="0dp"
+        android:src="@drawable/ic_clear_basket"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewAddToBasketMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/imageViewAddToBasketMain"
+        app:layout_constraintTop_toTopOf="@id/imageViewAddToBasketMain" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutOrderMain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/main_menu" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

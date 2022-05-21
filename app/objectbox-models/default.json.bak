@@ -36,9 +36,43 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "2:3528295928943840132",
+      "lastPropertyId": "5:6443684064960804938",
+      "name": "DayEntity",
+      "properties": [
+        {
+          "id": "1:1067398928394271431",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:6900461500517422746",
+          "name": "day",
+          "type": 9
+        },
+        {
+          "id": "3:2998167096759067630",
+          "name": "date",
+          "type": 9
+        },
+        {
+          "id": "4:5396985499853910563",
+          "name": "weekNumber",
+          "type": 5
+        },
+        {
+          "id": "5:6443684064960804938",
+          "name": "isSelected",
+          "type": 1
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "1:4192788661750002143",
+  "lastEntityId": "2:3528295928943840132",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",
