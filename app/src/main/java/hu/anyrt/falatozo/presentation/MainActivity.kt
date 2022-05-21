@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity() {
         populateList()
     }
 
+    // Teszt
     private fun test() {
         Dao().clearDays()
         Dao().addDay(
