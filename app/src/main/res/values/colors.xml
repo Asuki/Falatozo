@@ -11,4 +11,14 @@
     <color name="dark_blue">#2962FF</color>
     <color name="primary_color">#9B8468</color>
     <color name="secondary_color">#876D4B</color>
+
+    <!-- ANY colors -->
+    <color name="any_gold_100">#876D4B</color>
+    <color name="any_gold_80">#9B8468</color>
+    <color name="any_gold_50">#BDAD98</color>
+    <color name="any_gold_30">#D6CBBD</color>
+
+    <color name="any_brown_100">#743D2A</color>
+    <color name="any_brown_80">#8D5C49</color>
+    <color name="any_brown_30">#D6CBBD</color>
 </resources>

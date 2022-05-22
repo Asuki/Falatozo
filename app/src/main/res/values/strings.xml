@@ -13,4 +13,8 @@
     <string name="exit">Exit</string>
     <string name="clear_basket">clear basket</string>
     <string name="add_to_basket">Add to basket</string>
+    <string name="login">Login</string>
+    <string name="remember_password">Remember password</string>
+    <string name="password">password</string>
+    <string name="username">username</string>
 </resources>

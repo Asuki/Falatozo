@@ -12,4 +12,8 @@
     <string name="exit">Kijelentkezés</string>
     <string name="add_to_basket">Hozzáadás a kosárhoz</string>
     <string name="clear_basket">Kosár ürítése</string>
+    <string name="login">Bejelentkezés</string>
+    <string name="remember_password">Jelszó megjegyzése</string>
+    <string name="password">jelszó</string>
+    <string name="username">felhasználónév</string>
 </resources>

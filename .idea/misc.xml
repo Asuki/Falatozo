@@ -3,9 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/drawable/gradient_background.xml" value="0.36" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/drawable/ic_azonosito.xml" value="0.36" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/drawable/ic_exit.xml" value="0.36" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/drawable/ic_home.xml" value="0.3635" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/drawable/ic_nyitott_ajto.xml" value="0.36" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/drawable/ic_regi_kulcs.xml" value="0.36" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/drawable/ic_settings.xml" value="0.36" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/drawable/ic_szem.xml" value="0.36" />
+        <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/activity_login.xml" value="0.33559782608695654" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/activity_main.xml" value="0.3428442028985507" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/activity_settings.xml" value="0.33559782608695654" />
         <entry key="..\:/Repo/Falatozo/app/src/main/res/layout/fragment_home.xml" value="0.31521739130434784" />
