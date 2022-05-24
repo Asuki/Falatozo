@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:name=".presentation.FoodApplication"
+        android:usesCleartextTraffic="true"
         android:theme="@style/Theme.Falatozo">
         <activity
             android:name=".presentation.activity.LoginActivity"

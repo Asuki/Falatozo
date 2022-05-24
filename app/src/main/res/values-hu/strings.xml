@@ -16,4 +16,5 @@
     <string name="remember_password">Jelszó megjegyzése</string>
     <string name="password">jelszó</string>
     <string name="username">felhasználónév</string>
+    <string name="invalid_login_data">Hibás felhasználónév vagy jelszó</string>
 </resources>

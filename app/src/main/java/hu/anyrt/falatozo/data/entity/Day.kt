@@ -1,4 +1,4 @@
-package hu.anyrt.falatozo.data
+package hu.anyrt.falatozo.data.entity
 
 import io.objectbox.annotation.Entity
 import io.objectbox.annotation.Id

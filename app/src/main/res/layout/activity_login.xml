@@ -8,7 +8,7 @@
     tools:context=".presentation.activity.LoginActivity">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField1"
+        android:id="@+id/textFieldUserName"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -17,7 +17,7 @@
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/textField2"
+        app:layout_constraintBottom_toTopOf="@+id/textFieldPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -25,7 +25,7 @@
         app:startIconDrawable="@drawable/ic_azonosito">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditTextFelhasznalonev"
+            android:id="@+id/textInputEditTextUserName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/white"
@@ -37,7 +37,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField2"
+        android:id="@+id/textFieldPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
@@ -47,16 +47,16 @@
         app:boxCornerRadiusBottomStart="20dp"
         app:boxCornerRadiusTopEnd="20dp"
         app:boxCornerRadiusTopStart="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/checkBoxJelszoMegjegyzese"
-        app:layout_constraintEnd_toEndOf="@+id/textField1"
-        app:layout_constraintStart_toStartOf="@+id/textField1"
-        app:layout_constraintTop_toBottomOf="@+id/textField1"
+        app:layout_constraintBottom_toTopOf="@+id/checkBoxRememberPassword"
+        app:layout_constraintEnd_toEndOf="@+id/textFieldUserName"
+        app:layout_constraintStart_toStartOf="@+id/textFieldUserName"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldUserName"
         app:passwordToggleDrawable="@drawable/ic_szem"
         app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_regi_kulcs">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/textInputEditTextJelszo"
+            android:id="@+id/textInputEditTextPassword"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:backgroundTint="@color/white"
@@ -67,16 +67,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <CheckBox
-        android:id="@+id/checkBoxJelszoMegjegyzese"
+        android:id="@+id/checkBoxRememberPassword"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/default_vertical_margin"
         android:text="@string/remember_password"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/cardViewLogin"
-        app:layout_constraintEnd_toEndOf="@+id/textField2"
-        app:layout_constraintStart_toStartOf="@+id/textField2"
-        app:layout_constraintTop_toBottomOf="@+id/textField2" />
+        app:layout_constraintEnd_toEndOf="@+id/textFieldPassword"
+        app:layout_constraintStart_toStartOf="@+id/textFieldPassword"
+        app:layout_constraintTop_toBottomOf="@+id/textFieldPassword" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardViewLogin"
@@ -85,9 +85,9 @@
         android:layout_marginTop="@dimen/default_horizontal_margin"
         app:cardCornerRadius="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/checkBoxJelszoMegjegyzese"
-        app:layout_constraintStart_toStartOf="@+id/checkBoxJelszoMegjegyzese"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxJelszoMegjegyzese">
+        app:layout_constraintEnd_toEndOf="@+id/checkBoxRememberPassword"
+        app:layout_constraintStart_toStartOf="@+id/checkBoxRememberPassword"
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxRememberPassword">
 
         <Button
             android:id="@+id/buttonLogin"

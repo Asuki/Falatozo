@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import hu.anyrt.falatozo.R
-import hu.anyrt.falatozo.data.Day
+import hu.anyrt.falatozo.data.entity.Day
 
 /**
  * Összekapcsolja a napok listájához az adatokat és az egyedi nézetet

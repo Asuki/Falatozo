@@ -36,9 +36,63 @@
         }
       ],
       "relations": []
+    },
+    {
+      "id": "3:6227812604563228463",
+      "lastPropertyId": "9:8840084509343654732",
+      "name": "User",
+      "properties": [
+        {
+          "id": "1:5736587624488276360",
+          "name": "id",
+          "type": 6,
+          "flags": 1
+        },
+        {
+          "id": "2:1965537121037935815",
+          "name": "userId",
+          "type": 9
+        },
+        {
+          "id": "3:8835226102646235649",
+          "name": "employeeId",
+          "type": 5
+        },
+        {
+          "id": "4:99565300562045869",
+          "name": "username",
+          "type": 9
+        },
+        {
+          "id": "5:2856416164713857137",
+          "name": "lastName",
+          "type": 9
+        },
+        {
+          "id": "6:8565943690159456839",
+          "name": "firstName",
+          "type": 9
+        },
+        {
+          "id": "7:1817051438057868981",
+          "name": "email",
+          "type": 9
+        },
+        {
+          "id": "8:8405459055360383164",
+          "name": "avatar",
+          "type": 5
+        },
+        {
+          "id": "9:8840084509343654732",
+          "name": "password",
+          "type": 9
+        }
+      ],
+      "relations": []
     }
   ],
-  "lastEntityId": "2:3528295928943840132",
+  "lastEntityId": "3:6227812604563228463",
   "lastIndexId": "0:0",
   "lastRelationId": "0:0",
   "lastSequenceId": "0:0",

@@ -4,14 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.EditText
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import hu.anyrt.falatozo.R
 import hu.anyrt.falatozo.data.Dao
-import hu.anyrt.falatozo.data.Day
-import hu.anyrt.falatozo.data.ObjectBox
+import hu.anyrt.falatozo.data.entity.Day
 import hu.anyrt.falatozo.presentation.adapter.DayRecyclerAdapter
 
 
@@ -24,7 +25,11 @@ class MainActivity : AppCompatActivity() {
     // Képek a gombokhoz
     private lateinit var imageViewAddToBasket: ImageView
     private lateinit var imageViewClearBasket: ImageView
+
+    private lateinit var editTextSample: EditText
     private var menuDayList: ArrayList<Day> = ArrayList()
+
+    private val TAG = this::class.java.simpleName
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -114,6 +119,14 @@ class MainActivity : AppCompatActivity() {
             )
         recyclerViewMenu = findViewById(R.id.listViewMenu)
         imageViewAddToBasket = findViewById(R.id.imageViewAddToBasketMain)
+        imageViewAddToBasket.setOnClickListener(View.OnClickListener {
+            val bundle: Bundle = Bundle()
+            bundle.putString("main_extra_sample", editTextSample.text.toString())
+            val extraIntent: Intent = Intent(this@MainActivity, SettingsActivity::class.java)
+            extraIntent.putExtras(bundle)
+            startActivity(extraIntent)
+        })
+        editTextSample = findViewById(R.id.editTextSample)
         imageViewClearBasket = findViewById(R.id.imageViewClearBasketMain)
 
     }

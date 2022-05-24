@@ -1,5 +1,6 @@
 package hu.anyrt.falatozo.presentation.activity
 
+import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,6 +22,14 @@ class SettingsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_settings)
 
         init()
+        test()
+    }
+
+    private fun test() {
+        Toast.makeText(this@SettingsActivity,
+            intent.getStringExtra("main_extra_sample"),
+            Toast.LENGTH_SHORT)
+            .show()
     }
 
     private fun init() {
