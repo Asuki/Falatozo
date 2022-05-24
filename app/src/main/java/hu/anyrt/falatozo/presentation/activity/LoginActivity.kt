@@ -1,4 +1,4 @@
-package hu.anyrt.falatozo.presentation
+package hu.anyrt.falatozo.presentation.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,11 +1,13 @@
 package hu.anyrt.falatozo.data
 
+import android.util.Log
+
 
 class Dao {
     val dayBox = ObjectBox.get().boxFor(Day::class.java)
 
     fun addDay(day: Day){
-        dayBox.put(day)
+        val id = dayBox.put(day)
     }
 
     fun getDays() : ArrayList<Day>{

@@ -1,4 +1,4 @@
-package hu.anyrt.falatozo.presentation
+package hu.anyrt.falatozo.presentation.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -29,7 +29,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        ObjectBox.init(this)
+
+        // Actionbar beállítása
         setSupportActionBar(findViewById(R.id.toolbarMain))
 
         initViews()
@@ -46,11 +47,11 @@ class MainActivity : AppCompatActivity() {
         Dao().clearDays()
         Dao().addDay(
             Day(
-                0,
-                "Hétfő",
-                "2022.05.23",
-                21,
-                true
+                id = 0,
+                day = "Hétfő",
+                date = "2022.05.23",
+                weekNumber = 21,
+                isSelected = true
             )
         )
         Dao().addDay(

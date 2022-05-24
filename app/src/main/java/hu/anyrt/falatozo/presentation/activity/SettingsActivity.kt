@@ -1,9 +1,8 @@
-package hu.anyrt.falatozo.presentation
+package hu.anyrt.falatozo.presentation.activity
 
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import com.google.android.material.switchmaterial.SwitchMaterial
 import hu.anyrt.falatozo.R
