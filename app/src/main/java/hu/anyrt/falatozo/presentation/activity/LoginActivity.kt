@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
 import hu.anyrt.falatozo.R
@@ -111,7 +112,7 @@ class LoginActivity : AppCompatActivity() {
         val textView =
             snackView.findViewById(com.google.android.material.R.id.snackbar_text) as TextView
         textView.textSize = 16f
-        textView.setTextColor(resources.getColor(R.color.any_brown_100))
+        textView.setTextColor(ContextCompat.getColor(this@LoginActivity, R.color.any_brown_100))
         snack.show()
     }
 

@@ -22,7 +22,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        app:startIconDrawable="@drawable/ic_azonosito">
+        app:startIconDrawable="@drawable/ic_account">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditTextUserName"
@@ -51,9 +51,9 @@
         app:layout_constraintEnd_toEndOf="@+id/textFieldUserName"
         app:layout_constraintStart_toStartOf="@+id/textFieldUserName"
         app:layout_constraintTop_toBottomOf="@+id/textFieldUserName"
-        app:passwordToggleDrawable="@drawable/ic_szem"
+        app:passwordToggleDrawable="@drawable/ic_eye"
         app:passwordToggleEnabled="true"
-        app:startIconDrawable="@drawable/ic_regi_kulcs">
+        app:startIconDrawable="@drawable/ic_old_key">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/textInputEditTextPassword"
@@ -94,8 +94,9 @@
             style="@style/ButtBorderless"
             android:layout_width="200dp"
             android:layout_height="match_parent"
-            android:drawableStart="@drawable/ic_nyitott_ajto"
+            android:drawableStart="@drawable/ic_opened_door"
             android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:text="@string/login"
             app:layout_constraintCircleRadius="200dp" />
 
